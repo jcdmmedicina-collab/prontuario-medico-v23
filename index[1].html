@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bloco Médico de Plantão</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>Bloco Médico de Plantão</header>
+
+<div id="tabs">
+<div class="tab active" onclick="openTab('anamnese',event)">Anamnese</div>
+<div class="tab" onclick="openTab('hipotese',event)">Hipótese</div>
+<div class="tab" onclick="openTab('exames',event)">Exames</div>
+<div class="tab" onclick="openTab('prescricao',event)">Prescrição</div>
+<div class="tab" onclick="openTab('conduta',event)">Conduta</div>
+<div class="tab" onclick="openTab('protocolos',event)">Protocolos</div>
+<div class="tab" onclick="openTab('pesquisa',event)">Pesquisa</div>
+</div>
+
+<div id="anamnese" class="section active">
+<h3>Anamnese</h3>
+<textarea></textarea>
+</div>
+
+<div id="hipotese" class="section">
+<h3>Hipótese</h3>
+<textarea></textarea>
+</div>
+
+<div id="exames" class="section">
+<h3>Exames</h3>
+<textarea></textarea>
+</div>
+
+<div id="prescricao" class="section">
+<h3>Prescrição</h3>
+<textarea></textarea>
+</div>
+
+<div id="conduta" class="section">
+<h3>Conduta</h3>
+<textarea></textarea>
+</div>
+
+<div id="protocolos" class="section">
+
+<h3>Criar protocolo</h3>
+
+<input id="nomeProtocolo" placeholder="Nome do protocolo">
+
+<textarea id="textoProtocolo" placeholder="Digite o protocolo"></textarea>
+
+<button onclick="salvarProtocolo()">Salvar protocolo</button>
+
+<h3>Biblioteca</h3>
+
+<div id="listaProtocolos"></div>
+
+</div>
+
+<div id="pesquisa" class="section">
+
+<h3>Pesquisa</h3>
+
+<input id="campoPesquisa" placeholder="Pesquisar protocolo" onkeyup="pesquisarTexto()">
+
+<div id="resultadoPesquisa"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
